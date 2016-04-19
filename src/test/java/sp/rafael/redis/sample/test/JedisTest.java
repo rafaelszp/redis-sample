@@ -42,7 +42,7 @@ public class JedisTest {
         final long COUNT = 15000L;
         for (long i = 0; i < COUNT; i++) {
             final String nome = getRandomlyNames(50, 1)[0].toUpperCase();
-            jedis.zadd(NAMES_SET, 0, nome);
+            jedis.zadd(NAMES_SET, 0, nome+":::"+i);
         }
 
     }
